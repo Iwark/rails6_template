@@ -33,6 +33,9 @@ run 'bundle exec rails db:create'
 # annotate gem
 run 'rails g annotate:install'
 
+# webpacker install
+run 'rails webpacker:install'
+
 # set config/application.rb
 application  do
   %q{

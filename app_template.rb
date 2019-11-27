@@ -81,11 +81,15 @@ run 'wget https://raw.github.com/svenfuchs/rails-i18n/master/rails/locale/ja.yml
 # erb to slim
 run 'gem install html2slim'
 run 'bundle exec erb2slim -d app/views'
-gsub_file 'app/views/layouts/application.html.slim', /,\s\'data-turbolinks-track\'\s=>\strue/, ''
+gsub_file 'app/views/layouts/application.html.slim', /,\s\'data-turbolinks-track\':\s'reload'/, ''
 
-# jqueryの追加とturbolinksの削除
-inject_into_file 'app/assets/javascripts/application.js', after: "//= require rails-ujs\n" do "//= require jquery\n" end
-gsub_file 'app/assets/javascripts/application.js', /\/\/=\srequire\sturbolinks\n/, ''
+# Remove turbolinks
+gsub_file 'app/javascript/packs/application.js', /require("turbolinks").start()\n/, ''
+
+# jquery
+run 'yarn add jquery'
+inject_into_file 'app/javascript/packs/application.js', after: "require(\"channels\")\n" do "require(\"jquery\")\n" end
+get_remote('config/webpack/environment.js')
 
 # Bootstrap
 remove_file 'app/assets/stylesheets/application.css'

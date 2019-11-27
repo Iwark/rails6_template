@@ -154,4 +154,4 @@ get_remote('config/aws.rb')
 git
 git :init
 git add: '.'
-git commit: "-a -m 'rails new #{@app_name} -m https://raw.githubusercontent.com/Iwark/rails5_template/master/app_template.rb'"
+git commit: "-a -m 'rails new #{@app_name} -m https://raw.githubusercontent.com/Iwark/rails6_template/master/app_template.rb'"

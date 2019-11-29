@@ -147,7 +147,10 @@ get_remote('config/locales/devise.en.yml')
 get_remote('config/locales/devise.ja.yml')
 
 # AWS
-get_remote('config/aws.rb')
+get_remote('config/initializers/aws.rb')
+
+# carrierwave
+get_remote('config/initializers/carrierwave.rb')
 
 # git
 git

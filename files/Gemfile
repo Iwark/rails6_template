@@ -44,7 +44,9 @@ gem 'devise'
 gem 'enum_help'
 gem 'font_awesome5_rails'
 gem 'config'
-gem 'aws-sdk-s3'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog-aws'
 gem 'aws-ses'
 
 group :development, :test do

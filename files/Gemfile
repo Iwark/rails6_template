@@ -28,7 +28,6 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 ## custom gems
 gem 'slim-rails'
-gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'action_args'
 gem 'active_decorator'
@@ -42,7 +41,6 @@ gem 'unicorn'
 gem 'seed-fu', '~> 2.3'
 gem 'devise'
 gem 'enum_help'
-gem 'font_awesome5_rails'
 gem 'config'
 gem 'carrierwave'
 gem 'mini_magick'

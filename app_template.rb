@@ -88,16 +88,14 @@ gsub_file 'app/views/layouts/application.html.slim', /,\s\'data-turbolinks-track
 # Remove turbolinks
 gsub_file 'app/javascript/packs/application.js', /require("turbolinks").start()\n/, ''
 
-# jquery
-run 'yarn add jquery'
-inject_into_file 'app/javascript/packs/application.js', after: "require(\"channels\")\n" do "require(\"jquery\")\n" end
+# jquery / bootstrap
+run 'yarn add bootstrap jquery popper.js @fortawesome/fontawesome-free'
+get_remote('app/javascript/packs/application.js')
+get_remote('app/javascript/stylesheets/application.scss')
+get_remote('app/javascript/stylesheets/bootstrap_custom.scss')
+get_remote('app/javascript/stylesheets/reset.scss')
 get_remote('config/webpack/environment.js')
-
-# Bootstrap
-remove_file 'app/assets/stylesheets/application.css'
-get_remote('app/assets/stylesheets/application.scss')
-get_remote('app/assets/stylesheets/bootstrap-custom.scss')
-get_remote('app/assets/stylesheets/reset.scss')
+get_remote('app/assets/config/manifest.js')
 
 # Simple Form
 generate 'simple_form:install --bootstrap'

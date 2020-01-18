@@ -84,6 +84,7 @@ run 'wget https://raw.github.com/svenfuchs/rails-i18n/master/rails/locale/ja.yml
 run 'gem install html2slim'
 run 'bundle exec erb2slim -d app/views'
 gsub_file 'app/views/layouts/application.html.slim', /,\s\'data-turbolinks-track\':\s'reload'/, ''
+gsub_file 'app/views/layouts/application.html.slim', 'stylesheet_link_tag', 'stylesheet_pack_tag'
 
 # Remove turbolinks
 gsub_file 'app/javascript/packs/application.js', /require("turbolinks").start()\n/, ''

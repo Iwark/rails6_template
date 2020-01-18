@@ -89,11 +89,10 @@ gsub_file 'app/views/layouts/application.html.slim', 'stylesheet_link_tag', 'sty
 # Remove turbolinks
 gsub_file 'app/javascript/packs/application.js', /require("turbolinks").start()\n/, ''
 
-# jquery / bootstrap
-run 'yarn add bootstrap jquery popper.js @fortawesome/fontawesome-free'
+# fontawesome
+run 'yarn add @fortawesome/fontawesome-free'
 get_remote('app/javascript/packs/application.js')
 get_remote('app/javascript/stylesheets/application.scss')
-get_remote('app/javascript/stylesheets/bootstrap_custom.scss')
 get_remote('app/javascript/stylesheets/reset.scss')
 get_remote('config/webpack/environment.js')
 get_remote('app/assets/config/manifest.js')

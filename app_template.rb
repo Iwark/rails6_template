@@ -94,7 +94,6 @@ run 'yarn add @fortawesome/fontawesome-free'
 get_remote('app/javascript/packs/application.js')
 get_remote('app/javascript/stylesheets/application.scss')
 get_remote('app/javascript/stylesheets/reset.scss')
-get_remote('config/webpack/environment.js')
 get_remote('app/assets/config/manifest.js')
 
 # Simple Form

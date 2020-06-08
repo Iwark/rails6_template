@@ -54,7 +54,6 @@ group :development, :test do
   ## custom gems
   gem 'annotate'
   gem 'pry-rails'
-  gem 'pry-coolline', github: 'owst/pry-coolline', branch: 'support_new_pry_config_api'
   gem 'pry-byebug'
   gem 'rb-readline'
   gem 'hirb'

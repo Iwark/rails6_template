@@ -55,7 +55,6 @@ group :development, :test do
   gem 'annotate'
   gem 'pry-rails'
   gem 'pry-byebug'
-  gem 'rb-readline'
   gem 'hirb'
   gem 'hirb-unicode'
   gem 'awesome_print'

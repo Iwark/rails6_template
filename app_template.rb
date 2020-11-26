@@ -108,6 +108,7 @@ get_remote('Capfile')
 # Deploy
 get_remote('config/deploy.rb.example', 'config/deploy.rb')
 gsub_file "config/deploy.rb", /my_repo/, @repo
+gsub_file "config/deploy.rb", /myapp/, @app_name
 run 'mkdir config/deploy'
 get_remote('config/deploy/production.rb.example', 'config/deploy/production.rb')
 gsub_file "config/deploy/production.rb", /myapp/, @app_name

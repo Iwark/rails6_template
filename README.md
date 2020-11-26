@@ -25,8 +25,8 @@ cd ruby-build
 sudo ./install.sh
 source ~/.zshrc
 
-rbenv install 2.6.5
-rbenv global 2.6.5
+rbenv install 2.7.2
+rbenv global 2.7.2
 rbenv rehash
 gem install bundler
 
@@ -51,7 +51,6 @@ sudo swapon -a
 sudo mkdir /var/sockets
 sudo chmod 777 /var/sockets
 ```
-
 
 ### Declare APP_NAME
 

@@ -150,6 +150,17 @@ get_remote('config/initializers/aws.rb')
 # carrierwave
 get_remote('config/initializers/carrierwave.rb')
 
+# lograge
+get_remote('config/initializers/lograge.rb')
+insert_into_file 'app/controllers/application_controller.rb',%(
+  def health
+    head :ok
+  end
+), after: 'class ApplicationController < ActionController::Base'
+insert_into_file 'config/routes.rb',%(
+  get '/health', to: 'application#health'
+), after: 'Rails.application.routes.draw do'
+
 # git
 git
 git :init

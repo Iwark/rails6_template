@@ -27,6 +27,9 @@ end
 # install gems
 run 'bundle install --path vendor/bundle --jobs=4'
 
+# Fix pesky hangtime
+run "spring stop"
+
 # Simple Form
 generate(:simple_form, "install --bootstrap")
 

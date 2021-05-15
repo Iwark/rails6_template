@@ -27,6 +27,9 @@ end
 # install gems
 run 'bundle install --path vendor/bundle --jobs=4'
 
+# Simple Form
+generate 'simple_form:install --bootstrap'
+
 # create db
 run 'bundle exec rails db:create'
 
@@ -91,9 +94,6 @@ get_remote('app/javascript/packs/application.js')
 get_remote('app/javascript/stylesheets/application.scss')
 get_remote('app/javascript/stylesheets/reset.scss')
 get_remote('app/assets/config/manifest.js')
-
-# Simple Form
-generate 'simple_form:install --bootstrap'
 
 # Whenever
 get_remote('config/schedule.rb')

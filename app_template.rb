@@ -28,7 +28,7 @@ end
 run 'bundle install --path vendor/bundle --jobs=4'
 
 # Simple Form
-generate 'simple_form:install --bootstrap'
+generate(:simple_form, "install --bootstrap")
 
 # create db
 run 'bundle exec rails db:create'
@@ -115,10 +115,10 @@ get_remote('config/unicorn.rb')
 get_remote('lib/capistrano/tasks/unicorn.rake')
 
 # Kaminari config
-generate 'kaminari:config'
+generate(:kaminari, "config")
 
 # Rspec
-generate 'rspec:install'
+generate(:rspec, "install")
 run "echo '--color -f d' > .rspec"
 
 # Guard
@@ -136,7 +136,7 @@ gsub_file "config/settings/test.yml", /myapp/, @app_name
 gsub_file "config/settings.yml", /myapp/, @app_name
 
 # Devise
-generate 'devise:install'
+generate(:devise, "install")
 get_remote('config/locales/devise.en.yml')
 get_remote('config/locales/devise.ja.yml')
 

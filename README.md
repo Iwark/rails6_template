@@ -25,8 +25,8 @@ cd ruby-build
 sudo ./install.sh
 source ~/.zshrc
 
-rbenv install 2.7.2
-rbenv global 2.7.2
+rbenv install 3.0.1
+rbenv global 3.0.1
 rbenv rehash
 gem install bundler
 

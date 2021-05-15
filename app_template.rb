@@ -33,6 +33,11 @@ run "spring stop"
 # Simple Form
 generate(:simple_form, "install --bootstrap")
 
+# Devise
+generate(:devise, "install")
+get_remote('config/locales/devise.en.yml')
+get_remote('config/locales/devise.ja.yml')
+
 # create db
 run 'bundle exec rails db:create'
 
@@ -137,11 +142,6 @@ gsub_file "config/settings/development.yml", /myapp/, @app_name
 gsub_file "config/settings/production.yml", /myapp/, @app_name
 gsub_file "config/settings/test.yml", /myapp/, @app_name
 gsub_file "config/settings.yml", /myapp/, @app_name
-
-# Devise
-generate(:devise, "install")
-get_remote('config/locales/devise.en.yml')
-get_remote('config/locales/devise.ja.yml')
 
 # AWS
 get_remote('config/initializers/aws.rb')

@@ -31,10 +31,10 @@ run 'bundle install --path vendor/bundle --jobs=4'
 run "spring stop"
 
 # Simple Form
-generate(:simple_form, "install --bootstrap")
+generate("simple_form:install --bootstrap")
 
 # Devise
-generate(:devise, "install")
+generate("devise:install")
 get_remote('config/locales/devise.en.yml')
 get_remote('config/locales/devise.ja.yml')
 
@@ -123,10 +123,10 @@ get_remote('config/unicorn.rb')
 get_remote('lib/capistrano/tasks/unicorn.rake')
 
 # Kaminari config
-generate(:kaminari, "config")
+generate("kaminari:config")
 
 # Rspec
-generate(:rspec, "install")
+generate("rspec:install")
 run "echo '--color -f d' > .rspec"
 
 # Guard

@@ -50,6 +50,7 @@ gem 'fog-aws'
 gem 'aws-ses'
 gem "lograge"
 gem 'rexml'
+gem 'rubocop', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -60,8 +61,6 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'hirb'
-  gem 'hirb-unicode'
-  gem 'awesome_print'
   gem 'rspec-rails'
   gem 'spring-commands-rspec'
   gem 'guard-rspec'

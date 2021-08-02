@@ -109,6 +109,9 @@ get_remote('config/schedule.rb')
 # Capistrano
 get_remote('Capfile')
 
+# pryrc
+get_remote('pryrc', '.pryrc')
+
 # Deploy
 get_remote('config/deploy.rb.example', 'config/deploy.rb')
 gsub_file "config/deploy.rb", /my_repo/, @repo

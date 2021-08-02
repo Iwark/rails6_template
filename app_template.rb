@@ -112,6 +112,9 @@ get_remote('Capfile')
 # pryrc
 get_remote('pryrc', '.pryrc')
 
+# Rubocop
+get_remote('rubocop.yml', '.rubocop.yml')
+
 # Deploy
 get_remote('config/deploy.rb.example', 'config/deploy.rb')
 gsub_file "config/deploy.rb", /my_repo/, @repo

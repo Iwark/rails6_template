@@ -160,6 +160,8 @@ get_remote('config/initializers/lograge.rb')
 
 # okcomputer
 get_remote('config/initializers/okcomputer.rb')
+get_remote('config/locales/okcomputer.en.yml')
+get_remote('config/locales/okcomputer.ja.yml')
 
 # git
 git

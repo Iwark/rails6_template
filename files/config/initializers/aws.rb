@@ -1,7 +1,4 @@
-if Rails.application.credentials.aws_access_key_id.present?
-  ActionMailer::Base.add_delivery_method :ses,
-    AWS::SES::Base,
-    access_key_id: Rails.application.credentials.aws_access_key_id,
-    secret_access_key: Rails.application.credentials.aws_secret_access_key,
-    server: 'email.us-west-2.amazonaws.com'
-end
+Aws::Rails.add_action_mailer_delivery_method(
+  :ses,
+  region: 'ap-northeast-1'
+)

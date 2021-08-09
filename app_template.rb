@@ -88,6 +88,15 @@ insert_into_file 'config/environments/development.rb',%(
   end
 ), after: 'config.assets.debug = true'
 
+# SES
+insert_into_file 'config/environments/production.rb',%(
+  config.action_mailer.default_url_options = {
+    protocol: 'https',
+    host: Settings.domain,
+  }
+  config.action_mailer.delivery_method = :ses
+), after: 'config.action_mailer.perform_caching = false'
+
 # Japanese locale
 run 'wget https://raw.github.com/svenfuchs/rails-i18n/master/rails/locale/ja.yml -P config/locales/'
 

@@ -47,7 +47,7 @@ gem 'config'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'
-gem 'aws-ses'
+gem 'aws-sdk-rails'
 gem "lograge"
 gem 'rexml'
 gem 'rubocop', require: false

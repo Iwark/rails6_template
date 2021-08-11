@@ -37,6 +37,7 @@ generate("simple_form:install --bootstrap")
 generate("devise:install")
 get_remote('config/locales/devise.en.yml')
 get_remote('config/locales/devise.ja.yml')
+gsub_file "config/initializers/devise.rb", /'please-change-me-at-config-initializers-devise@example.com'/, '"no-reply@#{Settings.domain}"'
 
 # create db
 run 'bundle exec rails db:create'

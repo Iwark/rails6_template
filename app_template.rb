@@ -11,6 +11,9 @@ end
 
 @repo = ask("Type github repository name ex: Iwark/rails6_template")
 
+# .tool_versions
+get_remote('tool-versions', '.tool-versions')
+
 # gitignore
 get_remote('gitignore', '.gitignore')
 

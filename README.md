@@ -1,5 +1,7 @@
 # Rails6 template
 
+# I'm now using [rails6_ecs_template](https://github.com/Iwark/rails6_ecs_template)
+
 ```
 rails new project_name -m https://raw.githubusercontent.com/Iwark/rails6_template/master/app_template.rb
 ```
